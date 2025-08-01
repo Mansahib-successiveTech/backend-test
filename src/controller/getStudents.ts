@@ -9,7 +9,7 @@ export const getall=async(req:Request,res:Response)=>{
 
 
 try{
-const result=await students.find().sort({name:1}.skip(skip).limit(limit));
+const result=await students.find().sort({name:1}).skip(skip).limit(limit);
 return res.status(200).json({
     data:result
 })
